@@ -2,14 +2,11 @@
 import sys
 
 
-def downcase_it():
-    if len(sys.argv) == 1:
+def downcase_it(pequeno):
+    print(pequeno.lower())
+       
+if len(sys.argv) == 1:
         print("none")
-    else:   
-        cont = 1
-        while cont < len(sys.argv):
-            nome = sys.argv[cont]
-            print(nome.lower())
-            cont = cont + 1
-
-downcase_it()
+else:    
+    for piquinin in sys.argv[1:]:
+        downcase_it(piquinin)
